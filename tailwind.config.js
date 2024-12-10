@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        dropDown: 'dropDown 0.6s ease-in-out'
+        dropDown: 'dropDown 0.6s ease-in-out',
+        likeAnimation:  'likeAnimation 0.2s ease-in-out'
       },
       keyframes: {
 
@@ -14,6 +15,12 @@ module.exports = {
         '0%': {opacity: '0', transform: 'translateY(-50px)', zIndex: '0' },
         '100%': {opacity: '1', transform: 'translateY(0)', zIndex: '0'  },
         },
+
+        likeAnimation: {
+          '0%': {opacity: '0', transform: 'scale(1.1)'},
+          '100%': {opacity: '1', transform: 'scale(1))'  },
+          },
+        
 
       },
     },

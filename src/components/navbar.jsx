@@ -14,8 +14,8 @@ const Navbar = () => {
      
     
     return ( 
-        <div className="w-full flex flex-col items-center  h-[13vh] overflow-visible">
-        <div className="z-50 w-[99%] flex items-center bg-yellow-400 rounded-xl relative p-4 top-2 border-2 border-rose-900">
+        <div className="w-full flex flex-col items-center h-[13vh] overflow-visible">
+        <div className="z-50 w-[99%] flex items-center bg-yellow-400 rounded-xl relative p-4 top-2 border-2 border-rose-900 bg-opacity-90 backdrop-blur-sm">
             <Link to={"/"}>
             <div className="text-[30px] ml-[20px] text-white font-extrabold absolute">SMAPP</div>
             <div className="text-[32px] ml-[16.4px] text-rose-900 font-extrabold">SMAPP</div>
