@@ -14,9 +14,14 @@ const Main = () => {
     const postRef = collection(database,"posts");
 
     const getPosts = async () => {
+
+        try{
         const data = await getDocs(postRef);
 
         await setPosts(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
+        } catch(err){
+            console.log(err.message);
+        }
     };
 
     useEffect(() => {
@@ -29,17 +34,9 @@ const Main = () => {
         return <div className=" text-center h-[87vh] w-full text-white font-extrabold flex justify-center items-center text-3xl"> 
         <Link to={"/login"} className="underline">Please Login</Link>...</div>
         
-    }
-
-    if(posts===null){
+    } else if(posts===null){
         return <div className=" text-center h-[87vh] w-full text-white font-extrabold flex justify-center items-center text-3xl">Loading...</div>
-    }
-
-    
-
-    
-
-    return ( 
+    }else return ( 
         
         <div className="w-full flex items-center justify-center">
 
