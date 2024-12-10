@@ -56,7 +56,7 @@ const PostForm = () => {
             <h1 className="font-bold text-2xl text-gray-900 text-center">Create Your Post</h1>
             <div className="flex flex-col gap-4 p-8 w-[80%]">
             <input placeholder="Your Title" {...register("title")} className="border-2 border-yellow-300 rounded focus:outline-yellow-500 min-h-[40px] p-2"/> 
-            <textarea placeholder="Your Content" {...register("body")} className="border-2 border-yellow-300 rounded focus:outline-yellow-500 min-h-[100px] p-2"/>
+            <textarea placeholder="Your Content" {...register("body")} className="border-2 border-yellow-300 rounded focus:outline-yellow-500 max-h-[100px] p-2"/>
             </div>
             
             <input type="submit" onClick={(e)=>e.preventDefault} className="bg-yellow-400 cursor-pointer px-2 py-4 rounded-lg border-[2.7px] shadow-yellow-500 text-xl font-extrabold border-rose-900 w-[260px] shadow-xl hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500 hover:translate-y-[-10px] transition-all text-white"/>

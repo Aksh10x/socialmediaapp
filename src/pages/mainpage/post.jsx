@@ -54,7 +54,7 @@ const Post = ({title, body, username, id}) => {
     };
 
     return ( 
-        <div className="max-w-[460px] flex flex-col bg-yellow-200 min-h-[200px] rounded-lg border-2 border-rose-900 shadow-2xl p-4">
+        <div className="max-w-[460px] flex flex-col bg-yellow-200 min-h-[200px] rounded-lg border-2 border-rose-900 shadow-2xl p-4 break-words">
             <div className="font-bold">
                 @{username}
             </div>
