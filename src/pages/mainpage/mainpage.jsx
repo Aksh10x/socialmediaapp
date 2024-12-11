@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 
 
 const Main = () => {
-
     const [user] = useAuthState(auth);
 
     const [posts, setPosts] = useState(null);
+    
     const postRef = collection(database,"posts");
 
     const getPosts = async () => {

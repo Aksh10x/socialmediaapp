@@ -30,10 +30,10 @@ const Navbar = () => {
             </div>
             
 
-            <div className="flex gap-2">   
+            <Link to={"/profile"} className="flex gap-2">   
                 {user ? <img src={user?.photoURL || null} height="25" width="25" className="rounded-full"/> : <div className="w-0"></div>}
                 <p>{user?.displayName}</p>
-            </div>
+            </Link>
 
             </div>
         </div>
