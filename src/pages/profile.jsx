@@ -31,7 +31,15 @@ const Profile = () => {
         
     } else if(posts===null){
         return <div className=" text-center h-[87vh] w-full text-white font-extrabold flex justify-center items-center text-3xl">Loading...</div>
-    }else return ( 
+    } else if(posts.length===0){
+        return(
+        <div className="w-full flex flex-grow flex-col items-center justify-center">
+            <div className="font-extrabold flex text-white text-3xl mt-8 items-center justify-center w-full">My Posts</div>
+            <div className="font-extrabold flex text-white text-3xl mt-8 flex-grow items-center justify-center w-full">Oops... No posts yet?</div>
+            <Link to={"/post"} className="underline text-white text-3xl flex flex-grow items-center justify-center w-full font-extrabold">Create Your First Post Now!</Link>
+        </div>
+        );
+    } else return ( 
         <>
         <div className="font-extrabold flex text-white text-3xl mt-8 items-center justify-center w-full">My Posts</div>
         <div className="w-full flex flex-col items-center justify-center">
